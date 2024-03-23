@@ -82,8 +82,7 @@ impl PointerHandler {
                 if event.pointer_type() == "touch" {
                     touch_handler(
                         event.pointer_id(),
-                        event::touch_position(&event, &canvas)
-                            .to_physical(super::super::scale_factor()),
+                        event::mouse_position(&event).to_physical(super::super::scale_factor()),
                         Force::Normalized(event.pressure() as f64),
                     );
                 } else {
@@ -113,8 +112,7 @@ impl PointerHandler {
                 if event.pointer_type() == "touch" {
                     touch_handler(
                         event.pointer_id(),
-                        event::touch_position(&event, &canvas)
-                            .to_physical(super::super::scale_factor()),
+                        event::mouse_position(&event).to_physical(super::super::scale_factor()),
                         Force::Normalized(event.pressure() as f64),
                     );
                 } else {
@@ -155,8 +153,7 @@ impl PointerHandler {
                     }
                     touch_handler(
                         event.pointer_id(),
-                        event::touch_position(&event, &canvas)
-                            .to_physical(super::super::scale_factor()),
+                        event::mouse_position(&event).to_physical(super::super::scale_factor()),
                         Force::Normalized(event.pressure() as f64),
                     );
                 } else {
@@ -182,8 +179,7 @@ impl PointerHandler {
                 if event.pointer_type() == "touch" {
                     handler(
                         event.pointer_id(),
-                        event::touch_position(&event, &canvas)
-                            .to_physical(super::super::scale_factor()),
+                        event::mouse_position(&event).to_physical(super::super::scale_factor()),
                         Force::Normalized(event.pressure() as f64),
                     );
                 }
